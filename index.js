@@ -22,7 +22,8 @@ const shop = new Sprite({
         x: 600,
         y: 128
     }, imageSrc: './img/shop.png',
-    scale: 2.75
+    scale: 2.75,
+    framesMax: 6
 })
 
 // criação - as linhas daqui passaram para um novo arquivo js(classes.js) com intuito de organização
@@ -40,6 +41,13 @@ const player = new Figther({
     offset: {
         x: 0,
         y: 0
+    },
+    imageSrc: './img/samuraiMack/Idle.png',
+    framesMax: 8,
+    scale: 2.5,
+    offset: {
+        x: 215,
+        y:180
     }
 })
 
