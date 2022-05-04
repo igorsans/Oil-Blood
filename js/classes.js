@@ -1,16 +1,23 @@
 class Sprite {
-    constructor({ position, imageSrc }) {
+    constructor({ position, imageSrc, scale = 1 }) {
         this.position = position
         // this.velocity = velocity
         this.width = 50
         this.height = 150
         this.image = new Image()
         this.image.src = imageSrc
+        this.scale = scale
        
     }
 
     draw() {
-        c.drawImage(this.image, this.position.x, this.position.y)
+        c.drawImage(
+            this.image,
+            this.position.x,
+            this.position.y,
+            this.image.width * this.scale,
+            this.image.height * this.scale
+            )
     }
     update() {
         this.draw()
@@ -20,12 +27,6 @@ class Sprite {
 }
 
 // bground
-const background = new Sprite({
-    position: {
-        x: 0,
-        y: 0
-    }, imageSrc: './img/background.png'
-})
 
 class Figther {
     constructor({ position, velocity, color = 'red', offset }) {
@@ -71,7 +72,7 @@ class Figther {
         this.position.x += this.velocity.x
         this.position.y += this.velocity.y
 
-        if (this.position.y + this.height + this.velocity.y >= canvas.height) {
+        if (this.position.y + this.height + this.velocity.y >= canvas.height -95) {
             this.velocity.y = 0
         } else this.velocity.y += gravity
     }
