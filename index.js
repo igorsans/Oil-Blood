@@ -156,7 +156,9 @@ window.addEventListener('keydown', (event) => {
             lastKey = 'a'
             break
         case 'w':
-            player.velocity.y = -20
+            if (player.position.y + player.height + player.velocity.y >= canvas.height -95){
+                player.velocity.y = -20
+            }
             break
         case ' ':
             player.attack()
@@ -201,4 +203,4 @@ window.addEventListener('keyup', (event) => {
 })
 
 
-// 42:58
+// 2:33
