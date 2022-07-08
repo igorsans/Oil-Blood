@@ -75,16 +75,16 @@ Atualmente para você testar esse jogo não é tão simples como um clique, o jo
 <!--te-->
 <!--ts-->
     - Player 2
-    - :arrow_up: : Pular
-    - :arrow_left: : Mover para Esquerda
-    - :arrow_right: : Mover para Direita
-    - :arrow_down: : Atacar
+    - ⬆️ : Pular
+    - ⬅️ : Mover para Esquerda
+    - ➡️ : Mover para Direita
+    - ⬇️ : Atacar
     - Num5: Defender (em desenvolvimento)
 <!--te-->
 Boa sorte!
 <hr>
 #Team
-Igor "Fakada" Santos - Programador / Direção de Arte
+Igor "Fakada" Santos - Programador / Direção de Arte <br>
 Romulo "SK" Estevam - Artista
 
 ## Sobre
