@@ -38,6 +38,8 @@ function decreaseTimer() {
     }
     if (timer === 0) {
         
+        player.dead = true
+        enemy.dead = true
         determineWinner({player, enemy, timerId})
     }
 

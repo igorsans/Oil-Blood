@@ -10,7 +10,7 @@ class Sprite {
         this.framesMax = framesMax
         this.framesCurrent = 0
         this.framesElapsed = 0
-        this.framesHold = 5
+        this.framesHold = 10
         this.offset = offset
     }
 
@@ -48,8 +48,6 @@ class Sprite {
 
 
 }
-
-// bground
 
 class Figther extends Sprite {
     constructor({ position,
@@ -125,7 +123,22 @@ class Figther extends Sprite {
         } else this.velocity.y += gravity
 
     }
-
+    PlayerSprintF(){
+        this.switchSprite('run')
+        this.velocity.x = 70
+    }
+    PlayerSprintB(){
+        this.switchSprite('run')
+        this.velocity.x = -50
+    }
+    enemySprintF(){
+        this.switchSprite('run')
+        this.velocity.x = -70
+    }
+    enemySprintB(){
+        this.switchSprite('run')
+        this.velocity.x = 50
+    }
     attack() {
         this.switchSprite('attack1')
         this.isAttacking = true
@@ -147,7 +160,8 @@ class Figther extends Sprite {
         if(this.image === this.sprites.attack1.image && this.framesCurrent < this.sprites.attack1.framesMax - 1) 
             return
         // override when gets hit
-        if(this.image === this.sprites.takeHit.image && this.framesCurrent < this.sprites.takeHit.framesMax -1) return
+        if(this.image === this.sprites.takeHit.image && this.framesCurrent < this.sprites.takeHit.framesMax -1)
+            return
 
         switch (sprite){
             case 'idle':

@@ -31,8 +31,8 @@ const shop = new Sprite({
 //player
 const player = new Figther({
     position: {
-        x: 0,
-        y: 0
+        x: 100,
+        y: 360
     },
     velocity: {
         x: 0,
@@ -92,8 +92,8 @@ const player = new Figther({
 
 const enemy = new Figther({
     position: {
-        x: 400,
-        y: 100
+        x: 800,
+        y: 360
     },
     velocity: {
         x: 0,
@@ -159,6 +159,12 @@ const keys = {
     d: {
         pressed: false
     },
+    e: {
+        pressed: false
+    },
+    q: {
+        pressed: false
+    },
     ArrowRight: {
         pressed: false
     },
@@ -191,7 +197,7 @@ function animate() {
     } else {
         player.switchSprite('idle')
     }
-
+    
     // jumping
     if (player.velocity.y < 0) {
         player.switchSprite('jump')
@@ -226,7 +232,10 @@ function animate() {
     ) {
         enemy.takeHit()
         player.isAttacking = false
-        document.querySelector('#enemyHealth').style.width = enemy.health + '%'
+
+        gsap.to('#enemyHealth', {
+            width: enemy.health + '%'
+        })
     }
 
     // if player misses
@@ -243,7 +252,9 @@ function animate() {
     ) {
         player.takeHit()
         enemy.isAttacking = false
-        document.querySelector('#playerHealth').style.width = player.health + '%'
+        gsap.to('#playerHealth', {
+            width: player.health + '%'
+        })
     }
     // if enemy misses
     if (enemy.isAttacking && enemy.framesCurrent === 2) {
@@ -262,6 +273,12 @@ window.addEventListener('keydown', (event) => {
     if (!player.dead) {
         switch (event.key) {
             // player
+            case 'e':
+                player.PlayerSprintF()
+                break
+            case 'q':
+                player.PlayerSprintB()
+                break
             case 'd':
                 keys.d.pressed = true
                 lastKey = 'd'
@@ -283,6 +300,12 @@ window.addEventListener('keydown', (event) => {
     if (!enemy.dead) {
         switch (event.key) {
             // enemy
+            case '4':
+                enemy.enemySprintF()
+                break
+            case '6':
+                enemy.enemySprintB()
+                break
             case 'ArrowRight':
                 keys.ArrowRight.pressed = true
                 enemy.lastKey = 'ArrowRight'
@@ -309,6 +332,9 @@ window.addEventListener('keyup', (event) => {
             break
         case 'a':
             keys.a.pressed = false
+            break
+        case 'f':
+            keys.f.pressed = false
             break
     }
 
