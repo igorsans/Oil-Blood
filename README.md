@@ -3,9 +3,10 @@ Jogo em desenvolvimento com base em conteudo disponivel no youtube por <a href="
 Este é um simples jogo de luta onde dois samurais se enfrentam em uma cidade futuristica. (em desenvolvimento)
 
 ## Personagens com suas particularidades.
-* O primeiro personagem, (nome será definido);
-<img src="./img/share/pers1.png"></img>
-Caracteristicas:
+* O primeiro personagem, (nome será definido)
+
+<img src="./img/share/pers1.png"></img><br>
+Caracteristicas:<br>
 <!--ts-->
     - Vantagens
         - Precisão aprimorada: sua espada consegue atingir seu inimigo a uma distancia maior.
@@ -15,8 +16,9 @@ Caracteristicas:
         - Precisão aprimorada: para conseguir atingir seus inimigos a uma distancia segura seus ataques são levementes mais lentos.
 <!--te-->
 * O segundo personagem, (nome será definido)
-<img src ="./img/share/pers2.png"></img>
-Caracteristicas:
+
+<img src ="./img/share/pers2.png"></img><br>
+Caracteristicas:<br>
 <!--ts-->
     - Vantagens
         - Wd40: Este personagem consegue atacar em uma velocidade maior que seu inimgo.
