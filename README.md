@@ -57,7 +57,7 @@ Caracteristicas:<br>
 <li>Hospedar jogo para facil acesso de jogadores</li></ul></ul></ul></ul>
 
 # Como jogar
-Atualmente para você testar esse jogo não é tão simples como um clique, o jogo tambem não dispoem de um menu, basta jogar, e para isso você terá que fazer o download desse repositorio e abrir o arquivo "index.html" na pasta raiz desse repositorio para que o jogo inicie no seu navegador.
+Para jogar é bem simples, basta você acessar esse link <a href="https://igorsans.github.io/Oil-Blood/">aqui!</a>
 - Para jogar é necessario duas pessoas para comandar cada um dos personagens.
 - Player vs Player, ganha quem conseguir derrubar seu inimigo primeiro, o jogo dispoem de um contador de segundos que conta 1 minuto, caso esse tempo termine é definido vencedor o jogador com maior quantidade de vida.
 - Caso um Player perca ou o tempo termine para iniciar uma nova partida basta você recarregar a pagina do seu navegador (F5, ou CRTL + R).
